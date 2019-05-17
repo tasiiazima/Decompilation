@@ -26,6 +26,7 @@ implements ActionListener {
     private int shape;
 
     public TitlesPanel(int _shape) {
+    /**запуск анимации*/
         this.shape = _shape;
         this.animation = new Timer(50, this);
         this.animation.setInitialDelay(50);
@@ -40,6 +41,7 @@ implements ActionListener {
     }
 
     private void doDrawing(Graphics g) {
+    /** прорисовка фигур и задание анимации */
         this.is_done = false;
         this.g2d = (Graphics2D)g;
         this.g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
