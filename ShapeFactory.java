@@ -1,5 +1,6 @@
 /*
  * Decompiled with CFR 0.139.
+ @version 1.0
  */
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -20,7 +21,9 @@ public class ShapeFactory {
     public int height = 25;
 
     public ShapeFactory(int shape_type) {
+        /** @throw  Error "type is nusupported" if shape type is wrong */
         switch (shape_type / 10) {
+                /** назначаем для каждой фигуры определенное значение */
             case 1: {
                 this.shape = ShapeFactory.createStar(3, new Point(0, 0), (double)this.width / 2.0, (double)this.width / 2.0);
                 break;
@@ -52,6 +55,7 @@ public class ShapeFactory {
             }
         }
         switch (shape_type % 10) {
+                 /** назначаем для каждого цвета определенное значение */
             case 1: {
                 this.stroke = new BasicStroke(3.0f);
                 break;
